@@ -1,0 +1,28 @@
+.hawk1{
+    background-color: rgb(21,10,89);
+    color: rgb(136,108,166);
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+#yyyy{
+    width: 100%;
+    height: 100vh;
+    background-image: url("hawkeye.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hawk{
+    padding-left: 20px;
+    font-size: 30px;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.pre{
+    white-space:pre;
+    font-size: 30px;
+    padding-left: 10px;
+}

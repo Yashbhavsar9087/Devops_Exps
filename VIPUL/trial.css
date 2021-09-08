@@ -1,0 +1,118 @@
+
+body{
+    margin: 0px;
+}
+.top_review_layout{
+    width: 90%;
+    height: 235px;
+    background-color: #efefef;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 30px;
+    opacity: 1;
+
+}
+.top_reviews{
+    width: 60%;
+    height: 31px;
+    margin-left: 20%;
+    margin-top:14px;
+    font: Bold 18px/21px Bookman Old Style;
+    text-align: center;
+    background: #7186996E 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 7px;
+    opacity: 1;
+}
+.arrow_left{
+    width: 22px;
+    height: 22px;
+    margin:80px 0 80px calc(9.5% - 30px);
+    background: #000000 0% 0% no-repeat padding-box;
+    border-radius: 50%;    
+    display: inline-block;
+}
+.title_of_the_review1{
+    width: 33%;
+    height: 69%;
+    margin:12px 0.5% 0px 1%;
+    background: #EFEFEF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    top:-160px;
+}
+.part1{
+    width: 100%;
+    text-align: center;
+    font: Bold 9px/12px Cambria;
+}
+.surname{
+    width: 79%;
+    text-align: center;
+    font: Bold 9px/12px Cambria;
+    margin: 0 10%;
+}
+.section{
+    margin-left: 5%;
+    margin-top: 5px;
+    width: 90%;
+    height: 70%;
+    
+   
+}
+.carousel{
+    height: 100%;
+}
+.carousel-inner{
+    
+    border-radius: 20px;
+    height: 100%;
+}
+.carousel-item {
+    border-radius: 20px;
+    height: 100%;
+}
+.row{
+    height: 100%;
+}
+.col-sm-6{
+    height: 100%;
+    border-radius: 20px;
+    padding: 0px;
+    background-color: #ffffff;
+}
+.card-body{
+    border-radius: 20px;
+        height: 100%;
+}
+.card{
+    border-radius: 20px;
+    height: 100%;
+}
+.stars{ 
+    text-align: center;
+    margin-top: 5px;
+}
+.checked
+{
+  color:#BE882E;
+  text-shadow: 0px 0px 2px black;
+}
+
+.unchecked
+{
+  color: #C7C8D2;
+  text-shadow: 0px 0px 2px black;
+}
+.card-title{
+    font-size: 11px;
+}
+.reviewed_on{
+    font-size: 9px;
+    margin-left: 11%;
+}
+.reviews{
+    font-size: 9px ;
+}

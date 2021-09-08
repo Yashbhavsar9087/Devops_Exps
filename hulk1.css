@@ -1,0 +1,30 @@
+.hulk1{
+    background-color: rgb(20, 19, 19);
+    color: rgb(43, 151, 0);
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+#yyyy{
+    width: 100%;
+    height: 100vh;
+    background-image: url("hulk.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hulk{
+    padding-left: 20px;
+    font-size: 30px;
+    color: blanchedalmond;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.pre{
+    white-space:pre;
+    font-size: 30px;
+    padding-left: 10px;
+    color: blanchedalmond;
+}

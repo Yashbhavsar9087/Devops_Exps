@@ -1,0 +1,28 @@
+.infinity{
+    width: 100%;
+    height: 100vh;
+    background-image: url("infinity.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(5,1,4) ;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.infi{
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0px;
+}
+.infi iframe {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+}

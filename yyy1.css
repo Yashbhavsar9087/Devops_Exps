@@ -1,0 +1,27 @@
+.avengers{
+    width: 100%;
+    height: 100vh;
+    background-image: url("yyy.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;}
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+
+.avgg{
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0px;
+}
+.avgg iframe {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+}

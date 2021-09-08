@@ -1,0 +1,462 @@
+.a{
+    width: 100%;
+    height: 635px;
+    background-color: black;
+}
+.item{
+    width: 100%;
+    height: 2635px;
+    background-color: #efefef;
+}
+#specifications_table {
+    width: 94%;
+    height: 343px;
+    border:1px  black;
+    border-collapse: collapse;
+    background-color: white;
+    margin: 0 3%;
+    box-shadow: 0px 1px 3px;
+  }
+#specifications_table th,td{
+    height: 32px;
+    border:1px solid black;
+    border-collapse: collapse;
+}
+.share_the_product{
+    height: 42px;
+    width: 90%;
+    border-collapse: collapse;
+    
+    margin: 20px 5%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    
+} 
+.share_the_product th{
+    width: 45%;
+    margin: 15px 0px;
+}
+.brand{
+    
+    text-decoration: none;
+    color:#e2b00e;
+} 
+.review{
+    border-left: 3px solid #e2b00e;
+}
+body{
+    margin: 0px;
+}
+
+
+.customer_review2{
+    width: 94%;
+    height: 305px;
+    margin: 0px 0px 0px 3%;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 30px;
+    display: inline-block;
+    background-color: #FFFFFF;
+
+}
+.customer_reviews{
+    width: 90%;
+    margin:13px 5% 0px;
+    text-align: center;
+    font: Bold 25px/25px Bookman Old Style;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+.stars{
+    
+    margin-left: 8%;
+    margin-top: 15.5px;
+}
+.checked
+{
+  color:#BE882E;
+  text-shadow: 0px 0px 2px black;
+}
+
+.unchecked
+{
+  color: #C7C8D2;
+  text-shadow: 0px 0px 2px black;
+}
+.x_out_of_5{
+    padding-left: 9%;
+    font: Regular 22px/26px Maiandra GD;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    font-weight: bold;
+    font-size: 20px;
+}
+.y_ratings{
+    margin-left:4% ;
+    margin-top: 9.74px;
+}
+.star5 label{
+    position: relative;
+    top: -3.5px;
+    margin-left:9%;
+    font: Regular 19px/22px Maiandra GD;
+
+}
+.file{
+    width: 68%;
+    height: 25px;
+    margin:10px 0px 0px 3px;
+}
+progress {
+    border:none;
+    
+    width: 400px;
+    height: 60px;
+    
+} 
+  progress::-webkit-progress-value {
+    background: #93bb01;
+    border:1px solid #000000;
+    border-radius: 10px;
+    
+}
+  progress::-webkit-progress-bar {
+    border:1px solid #000000;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+} 
+  progress::-moz-progress-bar {
+    border:1px solid #000000;
+    border-radius: 12.5px;
+    color: #FFFFFF;
+    background-color: #FFFFFF;
+  }
+  @media only screen and (max-width:335px){
+    .customer_review2 .customer_reviews{  
+        width: 90%;
+        margin:13px 5% 0px;
+        text-align: center;
+        font: Bold 20px/20px Bookman Old Style;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+    }
+}        
+@media only screen and (min-width:480px) and (max-width: 790px){
+    .customer_reviews{
+        width: 90%;
+        margin:13px 5% 0px;
+        text-align: center;
+        font: Bold 15px/15px Bookman Old Style;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+    }
+    .stars{
+    
+        margin-left: 2%;
+        margin-top: 1px;
+    }
+    .x_out_of_5{
+        padding-left: 5%;
+        font: Regular 22px/26px Maiandra GD;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .star5 label{
+        position: relative;
+        top: -3.5px;
+        margin-left:5%;
+        font: Regular 19px/22px Maiandra GD;
+    
+    }
+}  
+@media only screen and (min-width:480px) {
+    .customer_review2{
+        width: 40%;
+        height: 280px;
+        display: inline-block;
+    }
+}
+@media only screen and (min-width:791px) and (max-width:949px) {
+    .customer_review2{
+        width: 40%;
+        height: 300px;
+        display: inline-block;
+    }
+}
+@media only screen and (min-width: 950px) {
+    .customer_review2{
+        height: 315px;
+        width: 26%;
+        display: inline-block;
+    }
+}
+.top_reviews_layout{
+    width: 94%;
+    height: 235px;
+    background-color: #FFFFFF;
+    margin: 20px 2%;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 30px;
+}
+@media only screen and (min-width:480px){
+    .top_reviews_layout{
+        width: 52%;
+        height: 280px;
+        margin: 0px 2%;
+        float: right;
+        
+    }
+}
+@media only screen and (min-width:791px) {
+    .top_reviews_layout{
+        width: 52%;
+        height: 300px;
+        display: inline-block;
+    }
+}
+@media only screen and (min-width: 950px) {
+    .top_reviews_layout{
+        width: 65%;
+        height: 315px;
+       
+    }
+}
+.top_reviews{
+    width: 60%;
+    height: 31px;
+    margin-left: 20%;
+    margin-top:14px;
+    font: Bold 18px/21px Bookman Old Style;
+    text-align: center;
+    background: #7186996E 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 7px;
+    opacity: 1;
+}
+.arrow_left{
+    width: 22px;
+    height: 22px;
+    
+    margin:0 0 80px calc(9.5% - 30px);
+    background: #007900 0% 0% no-repeat padding-box;
+    border-radius: 50%;
+    
+    display: inline-block;
+}
+.title_of_the_review{
+    width: 39%;
+    height: 71%;
+    margin:12px 0.5% 0px 1%;
+    background: #EFEFEF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    display: inline-block;
+}
+.part1{
+    text-align: center;
+    font: Bold 11px/12px Cambria;
+}
+.surname{
+    width: 79%;
+    text-align: center;
+    font: Bold 11px/12px Cambria;
+    margin: 0 10%;
+}
+.stars{
+    
+    text-align: center;
+    margin-top: 5px;
+}
+.checked
+{
+  color:#BE882E;
+  text-shadow: 0px 0px 2px black;
+}
+
+.unchecked
+{
+  color: #C7C8D2;
+  text-shadow: 0px 0px 2px black;
+}
+.reviewed_on{
+    font-size: 12px;
+    margin-left: 11%;
+}
+.reviews{
+    font-size: 10px ;
+}
+.title_of_the_review1{
+    width: 39%;
+    height: 71%;
+    margin:12px 1% 0 0.5%;
+    background: #EFEFEF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    display: inline-block;
+
+}
+.arrow_right{
+    width: 22px;
+    height: 22px;
+    margin:0 calc(9.5% - 30px) 80px 0;
+    background: #007900 0% 0% no-repeat padding-box;
+    border-radius: 50%;
+    display: inline-block;
+}
+.related_products{
+    width: 226px;
+    font: Bold 20px/24px Bookman Old Style;
+    text-align: center;
+    margin: 40px calc((100% - 226px)/2) 0 ;
+    border-bottom: 1px solid #007900;
+}
+.container {
+    /* Layout Properties */
+    padding: 0 3.3%;
+  }
+  @media (min-width: 700px) {
+    .container {padding: 0%;}
+  }
+  .bookmark {
+    /* Layout Properties */
+    top: -20px;
+    left: -5px;
+    position: relative;
+    /* UI Properties */
+    color: #93BB01;  
+  }
+  .product-box {
+    /* Layout Properties */
+    width: 40%;
+    display: inline-block;
+    margin: 10px 4.7%;  
+  }
+  @media (min-width: 700px) {
+    .product-box {width: 18.5%; margin: 10px 1.5%;}
+  }
+  .box {
+    /* Layout Properties */
+    height: 190px;
+    margin: 0 0 5px 0;
+    padding: 10px;
+    /* UI Properties */
+    border: 1px solid #707070;
+    background-color: #ffffff;
+  }
+  .product-image {
+    /* Layout Properties */
+    width: 60%;
+    padding: 38px 20% 28px;
+  }
+  .ratings {
+    /* Layout Properties */
+    margin: 0 calc((100% - 95px)/2);
+    width: 95px;    
+  }
+  /* For the Product Name text */
+  .text_display {
+    /* Layout Properties */
+    position: relative;
+    width: 150px;
+    text-align: center;
+    margin: 0 calc((100% - 150px)/2);
+    
+  }
+  .text1 {
+    /* UI Properties */
+    font: Regular 20px/22px Berlin Sans FB;
+    letter-spacing: 0px;
+    color: #000000;
+  }
+  /* For the price text */
+  .text2 {
+    /* Layout Properties */
+    display: inline;
+    /* UI Properties */
+    font: Regular 15px/16px Berlin Sans FB;
+    letter-spacing: 0px;
+    color: #93BB01;
+    opacity: 1;
+    border-bottom: 3px solid #BE882E;  
+  }
+  .checked {
+    /* UI Properties */
+    color:#BE882E;
+    text-shadow: 0px 0px 2px black;
+  }
+  .unchecked {
+    /* UI Properties */
+    color: #C7C8D2;
+    text-shadow: 0px 0px 2px black;
+  }  
+ .container .arrow_left_2{
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+  }
+  @media   only screen and (min-width:700px){
+    .container .arrow_left_2{
+       visibility: visible;
+       width: 22px;
+       height: 22px;
+       margin:0 0 120px calc((8% - 26px)/2);
+       background: #007900 0% 0% no-repeat padding-box;
+       border-radius: 50%;
+       display: inline-block;
+    }
+}
+@media   only screen and (min-width:900px){
+    .container .arrow_left_2{
+       visibility: visible;
+       width: 22px;
+       height: 22px;
+       margin:0 0 120px calc((11% - 26px)/2);
+       background: #007900 0% 0% no-repeat padding-box;
+       border-radius: 50%;
+       display: inline-block;
+    }
+}
+.container .arrow_right_2{
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+  }
+  @media   only screen and (min-width:700px){
+    .container .arrow_right_2{
+       visibility: visible;
+       visibility: visible;
+       width: 22px;
+       height: 22px;
+       margin:0 calc((8% - 30px)/2) 120px 0;
+       background: #007900 0% 0% no-repeat padding-box;
+       border-radius: 50%;
+       display: inline-block;
+    }
+}  
+.view_all{
+    width: 35%;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    background-color: #93BB01;
+    margin: 0 calc((65% - 2px)/2);
+    font: Bold 20px/12px Bookman Old Style;
+    color: #FFFFFF;
+    text-shadow: 0px 3px 6px #718699;
+    -webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: black;   
+}
+@media   only screen and (min-width:700px){
+    .view_all{
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='main-style.css'>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
+    <script src='main.js'></script>
+    </head>
+<body>
+    <!--########################################## nav bar ######################################-->
+    <nav class="nav-bar">
+        <!-- Top Navigation Menu --> 
+        <div class="top-nav"> 
+            <!-- nav-logo link --> 
+            <a class="nav-logo" href="vs-product-mobile.html"><img class="logo" src="images\vipulstationery.png" alt="logo"></a>                            
+            <!-- Signin-Register links -->
+            <a class="register-btn signin-register-btn" type="button" href="#" data-toggle="modal" data-target="#myModal">Register</a>
+            <a class="signin-btn signin-register-btn" type="button" href="#" data-toggle="modal" data-target="#myModal">Sign In</a>             
+        </div>
+        <div class="mid-nav">
+            <!-- Search Bar -->
+            <form class="search-bar">
+                <input class="form-control" type="text" placeholder="  Search for products, brands and more." aria-label="Search">
+                <button class="search-btn" type="submit"><i class="fa fa-search"></i> Search</button>
+            </form>            
+        </div>
+        <div class="bottom-nav">
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>                
+                <button class="dropdown-btn">CATEGORIES<i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                  <a href="#"><i class="fas fa-angle-double-right"></i> Adhesive & Tapes</a>
+                  <a href="#"><i class="fas fa-angle-double-right"></i> Basic Supplies</a>
+                  <a href="#"><i class="fas fa-angle-double-right"></i> Notebook & Diaries</a>
+                  <a href="#"><i class="fas fa-angle-double-right"></i> Office Supplies</a>
+                  <a href="#"><i class="fas fa-angle-double-right"></i> School & College Supplies</a>
+                  <a href="#"><i class="fas fa-angle-double-right"></i> Stationery Set</a>
+                </div>
+                <script>
+                    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+                    var dropdown = document.getElementsByClassName("dropdown-btn");
+                    var i;                    
+                    for (i = 0; i < dropdown.length; i++) {
+                      dropdown[i].addEventListener("click", function() {
+                      this.classList.toggle("active");
+                      var dropdownContent = this.nextElementSibling;
+                      if (dropdownContent.style.display === "block") {
+                      dropdownContent.style.display = "none";
+                      } else {
+                      dropdownContent.style.display = "block";
+                      }
+                      });
+                    }
+                </script>
+                <a href="#">Contact us</a>
+                <a href="#">Shop Now</a>
+                <a href="#">My Account</a>
+                <a href="#"><i class="far fa-heart"></i> Wishlist</a>                
+                <a href="#">Search</a>
+                <form class="search-bar">
+                    <input class="form-control" type="text" style="width: 80%; font-size: 11px;" placeholder="  Search for products, brands and more." aria-label="Search">
+                    <button class="search-btn" type="submit"><i class="fa fa-search" style="color: #fff;"></i></button>
+                </form>                
+            </div>      
+            <div id="main">
+                <button class="openbtn" onclick="openNav()"><i class="fa fa-bars fa-1.75x"></i></button>
+                <div class="map-cart-amt">
+                    <div class="dropdown-map">
+                        <i class="fa fi fa-map-marker-alt fa-1x"></i>
+                        <!--span style="font-size: 12px; margin-right: 10px;">Deliver to</span><br-->
+                        <span style="color: #93BB01; margin-right: 10px;">400-101</span>
+                        <div class="dropdown-content-map">
+                        <form  class="fpincode" action="">
+                            <input type="number" id="pincode" name="pincode" max="999999" placeholder="Enter pincode">
+                            <button id="check-btn" type="submit">Check</button>
+                        </form>
+                        <hr class="pin">                   
+                        </div>
+                    </div>
+                    <div class="cart-amt">
+                        <div class="dropdown-cart">
+                            <i class="fa fi fa-shopping-cart"></i>
+                            <i class="fa fi fa-rupee-sign"></i>
+                            <!--span>Deliver to</span><br-->
+                            <span>0.00 <i class="fa fi fa-caret-down"></i></span>
+                            <div class="dropdown-content-cart">
+                                <p class="no-items">There are no items in your cart.</p><br>
+                                <button class="cont-shop">Continue shopping</button>                   
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>            
+            <script>
+                function openNav() {
+                  document.getElementById("mySidebar").style.width = "250px";
+                  document.getElementById("main").style.marginLeft = "250px";
+                }        
+                function closeNav() {
+                  document.getElementById("mySidebar").style.width = "0";
+                  document.getElementById("main").style.marginLeft= "0";
+                }
+            </script>
+        </div>              
+    </nav>
+    <!--################################# product page ##########################################-->
+    <div id="category_div">
+        <button><i class="fa fa-bars gayab"></i>Categories<i class="fas fa-angle-down"></i></button>
+        <button class="hide_cat">Categories<i class="fas fa-angle-down"></i></button>
+        <button class="hide_cat">Categories<i class="fas fa-angle-down"></i></button>
+        <button class="hide_cat">Categories<i class="fas fa-angle-down"></i></button>
+        <button class="hide_cat">Categories<i class="fas fa-angle-down"></i></button>
+    </div>
+    <div class="name_and_descript">
+        <div class="product_name">ASUS ROG Strix G G531GD-BQ026T 15.6" FHD Gaming Laptop GTX 1050 4GB Graphics (Core i5-9300H 9th Gen/8GB RAM/512GB NVMe SSD/Windows 10/One-Zone RGB KB/2.40 Kg), Black</div>
+        <div id="description">by ASUS</div>
+    </div>
+    <div class="img_and_carosal">
+        <div id="product_img"><img src="images\8902519001238.jpg" alt=""></div>
+        <table class="img_carosal">
+            <tr>
+                <td><img src="images\8902519001238.jpg" alt=""></td>
+                <td><img src="images\8902519001238.jpg" alt=""></td>
+                <td><img src="images\8902519001238.jpg" alt=""></td>
+                <td><img src="images\8902519001238.jpg" alt=""></td>
+                <td><img src="images\8902519001238.jpg" alt=""></td>
+            </tr>
+        </table>
+    </div>
+    <div id="starss">
+    <span class="fas fa-star checked fa-2x"></span>
+    <span class="fas fa-star checked fa-2x"></span>
+    <span class="fas fa-star checked fa-2x"></span>
+    <span class="fas fa-star fa-2x"></span>
+    <span class="fas fa-star fa-2x"></span>
+    </div>
+    <div class="price_box">
+        <span class="price">Price</span>
+        <span id="product_qty">
+            <input type="button" class="minus" value="-">
+            <span class="qty">1</span>
+            <input type="button" class="plus" value="+">
+        </span>
+    </div>
+    <div class="wsh_cart">
+        <button class="wsh_lst"><i class="fas fa-heart liked"></i>  Add to wishlist</button>
+        <button class="add_cart"><i class="fas fa-shopping-cart"></i>  Add to cart</button>
+    </div>
+    <!--################################ yash ################################################
+    <section class="item">-->
+        </br>
+            <table id="specifications_table">
+                <tr>
+                    <th colspan="2">  Specifications for this item</th>   
+                </tr>
+                <tr>
+                  <td>PRODUCT</br> 
+                    DESCRIPTION</td>
+                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  nisi ut </td>
+                  
+                </tr>
+                <tr>
+                  <td>BRAND</td>
+                  <td>Brand name</td>
+                  
+                </tr>
+                <tr>
+                  <td>PRODUCT</br>
+                    TYPE</td>
+                  <td>Category</td>
+                  
+                </tr>
+                <tr>
+                    <td>PRODUCT</br>
+                        CODE</td>
+                    <td>#SKU 0000000</td>
+                </tr>
+                <tr>
+                    <td>BAR</br>
+                        CODE</td>
+                    <td>Yes/No</td>
+                </tr>
+                <tr>
+                    <td>PACKAGE</br>
+                        SIZE</td>
+                    <td>Size</td>
+                </tr>
+                <tr>
+                    <td>DELIVERY</br>
+                        TIME</td>
+                    <td>Estimated time of delivery</td>
+                </tr>
+                <tr>
+                    <td>RETURN</br>
+                        POLICY</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  nisi ut </td>
+                </tr>
+
+              </table>
+              <table class="share_the_product">
+                <tr>
+                    <th><a class="brand" href="http://#">Share the product 
+                        details with a friend</a> </th>
+                    <th class="review"><a class="brand " href="http://#">Write a review</a></th>
+                    
+                  </tr>
+
+              </table>
+            <div class="customer_review2"> 
+              <div class="customer_reviews">CUSTOMER REVIEWS</div>
+              <div class="stars">
+                    <span class="fa fa-star checked fa-x"></span>
+                    <span class="fa fa-star checked fa-x"></span>
+                    <span class="fa fa-star checked fa-x"></span>
+                    <span class="fa fa-star checked fa-x"></span>
+                    <span class="fa fa-star unchecked fa-x"></span>
+                    <span class="x_out_of_5">X out of 5</span>
+              </div>
+              <div class="y_ratings"> y customer ratings</div>
+              <div class="star5">
+                <label for="file">5 Star</label>
+                <progress class="file" value="100" max="100">  </progress><br>
+                <label for="file">4 Star</label>
+                <progress class="file" value="70" max="100">  </progress><br>
+                <label for="file">3 Star</label>
+                <progress class="file" value="50" max="100">  </progress><br>
+                <label for="file">2 Star</label>
+                <progress class="file" value="30" max="100">  </progress><br>
+                <label for="file">1 Star</label>
+                <progress class="file" value="10" max="100">  </progress>    
+              </div>
+            </div>   
+            <div class="top_review_layout">
+                <div class="top_reviews">TOP REVIEWS</div>
+                <section  class="section">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                  <div class="card">
+                                    <div class="card-body">
+                                      <h5 style="text-align: center;" class="card-title">TITLE OF THE REVIEW<br>NAME SURNAME</h5>
+                                      <div style="text-align: center;" class="stars">
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star unchecked fa-x"></span>
+                                      </div>
+                                      <div class="reviewed_on">Reviewed on _/_/_ </div>
+                                      <div class="reviews">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti laboris nisi ut.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-sm-6">
+                                  <div class="card">
+                                    <div class="card-body">
+                                      <h5 style="text-align: center;" class="card-title">TITLE OF THE REVIEW<br>NAME SURNAME</h5>
+                                      <div style="text-align: center;" class="stars">
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star unchecked fa-x"></span>
+                                      </div>
+                                      <div class="reviewed_on">Reviewed on _/_/_ </div>
+                                      <div class="reviews">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti laboris nisi ut.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                  <div class="card">
+                                    <div class="card-body">
+                                      <h5 style="text-align: center;" class="card-title">TITLE OF THE REVIEW<br>NAME SURNAME</h5>
+                                      <div style="text-align: center;" class="stars">
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star unchecked fa-x"></span>
+                                      </div>
+                                      <div class="reviewed_on">Reviewed on _/_/_ </div>
+                                      <div class="reviews">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti laboris nisi ut.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-sm-6">
+                                  <div class="card">
+                                    <div class="card-body">
+                                      <h5 style="text-align: center;" class="card-title">TITLE OF THE REVIEW<br>NAME SURNAME</h5>
+                                      <div style="text-align: center;" class="stars">
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star unchecked fa-x"></span>
+                                      </div>
+                                      <div class="reviewed_on">Reviewed on _/_/_ </div>
+                                      <div class="reviews">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti laboris nisi ut.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                  <div class="card">
+                                    <div class="card-body">
+                                      <h5 style="text-align: center;" class="card-title">TITLE OF THE REVIEW<br>NAME SURNAME</h5>
+                                      <div style="text-align: center;" class="stars">
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star unchecked fa-x"></span>
+                                      </div>
+                                      <div class="reviewed_on">Reviewed on _/_/_ </div>
+                                      <div class="reviews">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti laboris nisi ut.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-sm-6">
+                                  <div class="card">
+                                    <div class="card-body">
+                                      <h5 style="text-align: center;" class="card-title">TITLE OF THE REVIEW<br>NAME SURNAME</h5>
+                                      <div style="text-align: center;" class="stars">
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star checked fa-x"></span>
+                                        <span class="fa fa-star unchecked fa-x"></span>
+                                    </div>
+                                    <div class="reviewed_on">Reviewed on _/_/_ </div>
+                                    <div class="reviews">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti laboris nisi ut.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                    </section>  
+            </div>
+            <div class="related_products"> RELATED PRODUCTS </div>
+            <div class="container">
+                <div class="arrow_left_2"></div>
+                <div class="product-box">
+                    <div class="box">
+                        <i class="fa fa-bookmark fa-2x bookmark"></i>            
+                        <div class="product-image"><img src="images\8901180548059.jpg" alt="faltu" height="62px"></div>
+                        <div class="ratings">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star unchecked"></span>
+                        </div>                   
+                    </div>
+                    <div class="text_display">
+                        <div class="text1"><b>Product Name</b></div>
+                        <div class="text2">Price</div> 
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="box">
+                        <i class="fa fa-bookmark fa-2x bookmark"></i>            
+                        <div class="product-image"><img src="images\8901425032794.jpg" alt="faltu" height="62px"></div>
+                        <div class="ratings">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star unchecked"></span>
+                        </div>                   
+                    </div>
+                    <div class="text_display">
+                        <div class="text1"><b>Product Name</b></div>
+                        <div class="text2">Price</div> 
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="box">
+                        <i class="fa fa-bookmark fa-2x bookmark"></i>            
+                        <div class="product-image"><img src="images\8902519009807.jpg" alt="faltu" height="62px"></div>
+                        <div class="ratings">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star unchecked"></span>
+                        </div>                   
+                    </div>
+                    <div class="text_display">
+                        <div class="text1"><b>Product Name</b></div>
+                        <div class="text2">Price</div> 
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="box">
+                        <i class="fa fa-bookmark fa-2x bookmark"></i>            
+                        <div class="product-image"><img src="images\8908004279403.jpg" alt="faltu" height="62px"></div>
+                        <div class="ratings">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star unchecked"></span>
+                        </div>                   
+                    </div>
+                    <div class="text_display">
+                        <div class="text1"><b>Product Name</b></div>
+                        <div class="text2">Price</div> 
+                    </div>
+                </div>               
+                <div class="arrow_right_2"></div>
+            </div>
+            <button class="view_all">VIEW ALL</button>
+
+            <footer class="footer">
+                <div class="contain">
+                    <div class="col">
+                      <h1>CONTACT US</h1>
+                      <ul>
+                        <li><a href="http://#">+44 345 678 903</a></li>
+                        <li><a href="http://#">adobexd@gmail.com</a></li>
+                        <li><a href="http://#">Find a Store</a></li>
+                      </ul>
+                    </div>
+                    <div class="col">
+                      <h1>HOME</h1>
+                      <ul>
+                        <li><a href="http://#">My Account</a></li>
+                        <li><a href="http://#">Terms And Conditions</a></li>
+                        <li><a href="http://#">Privacy Policy</a></li>
+                        <li><a href="http://#">Frequently Asked Questions</a></li>
+                        <li><a href="http://#">About Us</a></li>
+                        <li><a href="http://#">Contact Us</a></li>
+                      </ul>
+                    </div>
+                    <div class="col">
+                        <h1>Shop By Category</h1>
+                        <ul>
+                          <li><a href="#"><i class="fa fa-angle-double-right"></i> Adhesive & Tapes</a></li>
+                          <li></li><a href="#"><i class="fa fa-angle-double-right"></i> Basic Supplies</a></li>
+                          <li></li><a href="#"><i class="fa fa-angle-double-right"></i> Notebook & Diaries</a></li>
+                          <li></li><a href="#"><i class="fa fa-angle-double-right"></i> Office Supplies</a></li>
+                          <li></li><a href="#"><i class="fa fa-angle-double-right"></i> School & College Supplies</a></li>
+                          <li></li><a href="#"><i class="fa fa-angle-double-right"></i> Stationery Set</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                      <h1>GET HELP</h1>
+                      <ul>
+                        <li><a href="http://#">Order Status</a></li>
+                        <li><a href="http://#">Delivery And Returns</a></li>
+                        <li><a href="http://#">Payment Options</a></li>
+                        <li><a href="http://#">Bulk Requirements</a></li>
+                      </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <p class="All_Rghts_Reserved">© Vipul Stationery 2020. All Rights Reserved</p>
+</body>
+</html>
